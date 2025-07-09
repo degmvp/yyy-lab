@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Isometric Menu com Losango</title>
+    <link rel="stylesheet" href="css/isom.css" />
+    <style>
+      li {
+        margin-left: 80px;
+        margin-top: 10px;
+      }
+      body {
+        margin-top: 0px;
+        background-color: black;
+      }
+
+      /* Estilo quando vira losango */
+      li.diamond {
+        transform: rotate(45deg) scale(0.8) !important;
+      }
+
+      li.diamond::before,
+      li.diamond::after {
+        display: none;
+      }
+
+      li.diamond a {
+        color: #fff !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li style="--i:11;--clr:#1da1f2;"><a href="./guia-html/area-dbase/screen.html"> DATABASES</a></li>
+      <li style="--i:10;--clr:#25d366;"><a href="./guia-html/bitwise-html">BINARY GUIDE</a></li>
+      <li style="--i:9;--clr:#8a00e6;"><a href="./guia-html/c++-html"> C++ REF GUIDE</a></li>
+      <li style="--i:8;--clr:#c32aa3;"><a href="./guia-html/go-html/">GOLANG GUIDE</a></li>
+      <li style="--i:7;--clr:#0bcca8;"><a href="./guia-html/knex-html/">KNEX REF GUIDE</a></li>
+      <li style="--i:6;--clr:#cc0b2f;"><a href="./guia-html/nodejs-html/">NODEJS REF GUIDE</a></li>
+      <li style="--i:5;--clr:#660000;"><a href="./guia-html/pandas-html/">PANDAS REF GUIDE</a></li>
+      <li style="--i:4;--clr:#cc800a;"><a href="./guia-html/python-html/">PYTHON GUIDE</a></li>
+      <li style="--i:3;--clr:#0a10cc;"><a href="./guia-html/ruby-html/">RUBY REF GUIDE</a></li>
+      <li style="--i:2;--clr:#cc0aba;"><a href="./guia-html/rust-html/">RUST REF GUIDE</a></li>
+      <li style="--i:1;--clr:#0a10cc;"><a href="./guia-html/streamlit-html/">STREAMLIT GUIDE</a></li> 
+      <li style="--i:0;--clr:#0a10cc;"><a href="./guia-html/jscript-html/">JSCRIPT GUIDE</a></li> 
+    </ul>
+
+    <script>
+      const items = document.querySelectorAll("ul li");
+
+      items.forEach((li) => {
+        const link = li.querySelector("a");
+        if (!link) return;
+
+        li.addEventListener("click", (e) => {
+          e.preventDefault(); // evita o redirecionamento imediato
+          if (!li.classList.contains("diamond")) {
+            // Primeiro clique: ativa visual
+            li.classList.add("diamond");
+          } else {
+            // Segundo clique: segue o link
+            window.location.href = link.href;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> APP01 -  2021/01/09 ...</title>
+    <h1 > Development Laboratory! Many technologies </h1>
+    <h2>Reference Guides Viewer</h2></br>
+     <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    }
+
+
+div.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 90vw;
+    text-align: center;
+   }
+
+body {
+            background-color:black;
+            font-size: 22px;
+            font-weight: 300;
+            margin: 0 25px; /*alt--------*/
+        }
+    h1{
+        font-size: 22px;
+        font-weight: 300;
+        text-align: left;
+        padding-top: 20px;
+        margin: 5 10px;
+        background:radial-gradient(navy,#c10303);
+        color: white;     
+
+    }  
+    
+    h2{
+        font-size: 22px;
+        font-weight: 300;
+        text-align: left;
+        margin: 5 10px;
+        background:radial-gradient(navy,#c10303);
+        color: white;    
+        max-height:60px;
+    }   
+    .branco{
+        color: white;
+        transition: all 0.25s ease-in-out;
+    }
+    .preto{
+        color:black;
+        transition: all 0.25s ease-in-out;
+    }
+
+    nav{
+    /*margin-left: 410px;    */
+    width: 100%;
+    max-width: 350px;
+}
+
+
+
+nav ul{
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul li{
+    cursor: pointer;
+    max-height:60px;
+    background:radial-gradient(navy,#c10303);
+    font-size: 16px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+    transition: 0.5s;
+}
+
+nav ul li:hover{
+    font-size: 13px;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%, 10% 50%);
+}
+
+nav ul li a{
+    padding: 30px 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="./area-dbase/screen.html">  Call Databases </a></li>
+        <li><a href="./c++-html/" >   Guia Referencia C++</a></li>
+        <li><a href="./go-html/">     Guia Referencia Golang </a> </a></li>
+        <li><a href="./jscript-html/">Guia Referencia javascript</a></li>
+        <li><a href="./knex-html/">   Guia Referencia Knex</a></li>
+        <li><a href="./nodejs-html/"> Guia Referencia Node-JS</a></li>
+        <li><a href="./pandas-html/"> Guia Referebcia Pandas  </a></li>
+        <li><a href="./python/">      Guia Referencia Python</a></li>
+        <li><a href="./ruby-html/">   Guia Referencia Ruby</a></li>
+        <li><a href="./rust-html/">   Guia Referebcia Rust</a></li>
+        <li><a href="./shell-html/">  Guia Referebcia Shellscript</a></li>
+        <li><a href="./streamlit-html/">Guia Referencia Streamlit</a></li>
+        <li><a href="./bitwise-html/">Guia Operações bitwise </a></li>
+
+    </ul>
+</nav>
+
+</body>
+</html>
